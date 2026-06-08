@@ -6,3 +6,16 @@
 .font-bangla{
     font-family: "Hind Siliguri", sans-serif;
 }
+
+/* NAV BAR SECTION DESIGN */
+.navbar{
+    margin: 0 auto;
+}
+.voca-logo{
+    max-width: 200px;
+    max-height: 100px;
+}
+
+.one-line{
+    display: flex;
+}

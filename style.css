@@ -19,3 +19,9 @@
 .one-line{
     display: flex;
 }
+
+/* learn vocabulary */
+.learn{
+    margin-top: 70px;
+    max-width: 1900px;
+}

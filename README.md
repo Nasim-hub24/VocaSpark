@@ -1,7 +1,7 @@
 # 🚀 VocaSpark
 
-VocaSpark is a modern vocabulary learning web application built with HTML, Tailwind CSS, DaisyUI, Vanilla JavaScript, and APIs 
-to make English learning simple, interactive, and engaging. ✨📚🚀
+SPARK YOUR VOCABULAY
+UNLOACK YOUR FUTURE. ✨📚🚀
 
 ## ✨ Features
 

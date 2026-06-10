@@ -33,7 +33,18 @@ const displayLevelWord = (words) =>{
     words.forEach(word => {
         const card = document.createElement("div");
         card.innerHTML = `
-            <p> hi </p>
+        <div class="bg-slate-200 rounded-xl shadow-md text-center py-8 px-3">
+
+            <h1 class="font-bold text-3xl">${word.word} </h1>
+            <p class="font-semibold my-2">meaning / pronunciation </p>
+            <h1 class="font-bold text-2xl my-4">"${word.meaning} / ${word.pronunciation} "</h1>
+
+            <div class="flex justify-between items-center">
+                <button class="btn bg-slate-400"><i class="fa-solid fa-info"></i></button>
+                <button class="btn bg-slate-400"><i class="fa-solid fa-volume-low"></i></button>
+
+            </div>
+        </div>
         `;
         levelWord.append(card);
     });

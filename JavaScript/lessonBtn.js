@@ -30,6 +30,20 @@ const displayLevelWord = (words) =>{
     const levelWord = document.getElementById("word-container");
     levelWord.innerHTML = "";
 
+
+    if(words.length ==0){
+        levelWord.innerHTML = `
+        <div class="text-center col-span-full py-5 space-y-6 font-bangla">
+            <p class="text-l text-gray-400 ">
+                এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+            </p>
+            <h1 class="text-3xl text-teal-400 font-bold ">
+                নেক্সট Lesson এ যান
+            </h1>
+        </div>
+        `;
+        return;
+    }
     words.forEach(word => {
         const card = document.createElement("div");
         card.innerHTML = `

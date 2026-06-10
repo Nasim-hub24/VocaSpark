@@ -15,6 +15,30 @@ const loadLessons = () =>{
         }) 
             
 };
+ 
+
+// --------< AFTER CLICKING LESSON BUTTON BEHIND THE SEAN THIS CODE RUN >----------
+const loadLevelWord = (id) =>
+{
+    const url = `https://openapi.programming-hero.com/api/level/${id}`;
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayLevelWord(data.data))
+};
+
+const displayLevelWord = (words) =>{
+    const levelWord = document.getElementById("word-container");
+    levelWord.innerHTML = "";
+
+    words.forEach(word => {
+        const card = document.createElement("div");
+        card.innerHTML = `
+            <p> hi </p>
+        `;
+        levelWord.append(card);
+    });
+};
+
 
 // FOR DISPLAY BUTTON IN USER INTERFACE (UI)
 // FOLLOW THIS FOUR STEPS
@@ -30,7 +54,7 @@ const displayLesson = (lessons) =>{
         // 3=> CREATE ELEMENT
         const btnDiv = document.createElement("div");
         btnDiv.innerHTML = `
-            <button class="btn btn-soft btn-primary"><i class="fa-solid fa-book"></i> LESSON - ${lesson.lessonName} </button>
+            <button onclick="loadLevelWord(${lesson.level_no})" class="btn btn-soft btn-primary"><i class="fa-solid fa-book"></i> LESSON - ${lesson.level_no} </button>
         `;
 
         // 4=> APPEND INTO CONTAINER
